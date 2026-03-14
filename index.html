@@ -1,1 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>診断士149</title>
 
+<style>
+body{
+font-family:-apple-system;
+background:#f2f2f2;
+text-align:center;
+padding:40px;
+}
+
+.card{
+background:white;
+padding:20px;
+border-radius:12px;
+box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+button{
+font-size:20px;
+padding:10px 20px;
+border:none;
+border-radius:10px;
+background:#007AFF;
+color:white;
+margin-top:20px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>診断士学習アプリ</h1>
+
+<div class="card">
+
+<h2 id="title">SWOT分析</h2>
+
+<p id="text">
+企業の強み弱み機会脅威を分析するフレームワーク
+</p>
+
+<button onclick="next()">次へ</button>
+
+</div>
+
+<script>
+
+const data=[
+["SWOT分析","企業の強み弱み機会脅威"],
+["STP分析","市場細分化ターゲット"],
+["競争戦略","競争優位戦略"],
+["NPV","投資の現在価値"],
+["モチベーション理論","動機づけ理論"]
+];
+
+let i=0;
+
+function next(){
+
+i++;
+
+if(i>=data.length){
+i=0;
+}
+
+document.getElementById("title").innerText=data[i][0];
+document.getElementById("text").innerText=data[i][1];
+
+}
+
+</script>
+
+</body>
+</html>
